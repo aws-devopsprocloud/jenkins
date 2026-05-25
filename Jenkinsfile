@@ -26,9 +26,10 @@ pipeline {
         }
         stage('Greeting') {
             steps {
-                sh ""
+                sh """
                     echo 'Hello, $GREETING'
-                ""
+                """
+                echo 'Hello Prem, $GREETING'
             }
         }
     }
