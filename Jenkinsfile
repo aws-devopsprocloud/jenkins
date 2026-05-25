@@ -4,7 +4,7 @@ pipeline {
             label 'AGENT-1'
         }
     } 
-
+   // BUILD
     stages {
         stage('Build') {
             steps {
@@ -20,6 +20,15 @@ pipeline {
             steps {
                 echo 'Deploying...'
             }
+        }
+    }
+    // POST 
+    post {
+        failure {
+            echo 'The pipeline is FAILED'
+        }
+        success {
+            echo 'The pipeline is SUCESS'
         }
     }
 }
