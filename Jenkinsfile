@@ -3,6 +3,10 @@ pipeline {
         node {
             label 'AGENT-1'
         }
+    environment { 
+        GREETING = 'Good Morning'
+    }
+
     } 
    // BUILD
     stages {
@@ -19,6 +23,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+            }
+        }
+        stage('Greeting') {
+            steps {
+                sh """
+                    echo 'Hello, $GREETING'
+                """
             }
         }
     }
