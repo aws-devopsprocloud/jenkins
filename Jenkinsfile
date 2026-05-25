@@ -3,11 +3,10 @@ pipeline {
         node {
             label 'AGENT-1'
         }
+    } 
     environment { 
         GREETING = 'Good Morning'
     }
-
-    } 
    // BUILD
     stages {
         stage('Build') {
