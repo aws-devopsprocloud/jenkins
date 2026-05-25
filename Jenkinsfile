@@ -15,6 +15,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh """ 
+                    sleep 10
+                """
             }
         }
         stage('Test') {
