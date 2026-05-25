@@ -29,7 +29,7 @@ pipeline {
                 sh """
                     echo 'Hello, $GREETING'
                 """
-                echo 'Hello Prem, $GREETING'
+                echo "Hello Prem, $GREETING"
             }
         }
     }
